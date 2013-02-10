@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="/js/angular.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript">
+        angSelect.setOptions([
+            {
+                value: 'php',
+                text:  'PHP'
+            },
+            {
+                value: 'javascript',
+                text:  'JavaScript'
+            },
+            {
+                value: 'csharp',
+                text:  'C#'
+            },
+            {
+                value: 'c',
+                text:  'C'
+            },
+            {
+                value: 'python',
+                text:  'Python'
+            },
+            {
+                value: 'bash',
+                text:  'Bash'
+            },
+            {
+                value: 'haskell',
+                text:  'Haskell'
+            },
+            {
+                value: 'lua',
+                text:  'Lua'
+            },
+            {
+                value: 'perl',
+                text:  'Perl'
+            }
+        ]);
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="container">
+    <form id="formContainer">
+        <div ng-app="angSelect">
+            <div
+                    id="selectContainer"
+                    class="control-group"
+                    ng-controller="AngSelectCtrl"
+                    as-focusout>
+                <input
+                        type="text"
+                        placeholder="Select a Language"
+                        ng-click="showHideDropdown(true)"
+                        ng-focus="showHideDropdown(true)"
+                        ng-model="data.selectedText">
+                <ol
+                        name="language"
+                        id="language"
+                        ng-hide="data.hideDropdown">
+                    <li
+                            ng-repeat="option in options | orderBy:'value' | filter:data.selectedText"
+                            ng-class-odd="'odd'"
+                            ng-class-even="'even'"
+                            ng-click="setSelection(option.value, option.text);showHideDropdown(false, true)">
+                        {{option.text}}
+                    </li>
+                </ol>
+                <input type="hidden" name="languageName" value="{{data.selectedValue}}">
+                <input type="button" onclick="alert('Value: \'{{data.selectedValue}}\'\nText:  \'{{data.selectedText}}\'');" value="Check values">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+    padding: 0 100px 0 100px;
+}
+#container {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    height:100px;
+    margin-top:100px;
+
+    background: rgb(76,76,76); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(71,71,71,1) 25%, rgba(0,0,0,1) 44%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,1)), color-stop(12%,rgba(89,89,89,1)), color-stop(25%,rgba(71,71,71,1)), color-stop(44%,rgba(0,0,0,1)), color-stop(60%,rgba(17,17,17,1)), color-stop(76%,rgba(43,43,43,1)), color-stop(91%,rgba(28,28,28,1)), color-stop(100%,rgba(19,19,19,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(71,71,71,1) 25%,rgba(0,0,0,1) 44%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(71,71,71,1) 25%,rgba(0,0,0,1) 44%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(71,71,71,1) 25%,rgba(0,0,0,1) 44%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(71,71,71,1) 25%,rgba(0,0,0,1) 44%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+#formContainer {
+    margin-left  : auto;
+    margin-right : auto;
+    width        : 200px;
+    text-align   : center;
+    padding      : 40px 100px;
+}
+#selectContainer {
+    position : relative;
+    width:100%;
+}
+#selectContainer input { margin : 0; }
+#selectContainer input[type="text"] {
+    margin : 0;
+    width  : 196px;
+}
+#selectContainer input[type="button"] {
+    width : 200px;
+}
+#language {
+    width            : 200px;
+    position         : absolute;
+    overflow         : auto;
+    min-height       : 20px;
+    max-height       : 170px;
+    background-color : white;
+    margin           : 22px 0 0 0;
+    padding-left     : 0;
+}
+#language li.odd {
+
+}
+#language li.even {
+    background-color : #f7f7f7;
+}
+#language li {
+    padding : 10px 5px;
+    list-style: none;
+    text-align      : left;
+}
+#language li:hover {
+    background-color : #5897fb;
+    color            : white;
+}
